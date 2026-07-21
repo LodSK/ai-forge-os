@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  devlaunch-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: devlaunch_service
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - JWT_SECRET=devlaunch_ai_secret_production_ready_999
+      - JWT_REFRESH_SECRET=devlaunch_ai_refresh_production_ready_111
+    volumes:
+      - devlaunch_data:/app/data
+    restart: unless-stopped
+
+volumes:
+  devlaunch_data:
+    driver: local

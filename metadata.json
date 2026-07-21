@@ -1,0 +1,8 @@
+{
+  "name": "AI Forge",
+  "description": "The Operating System for AI Builders. Build, deploy, track, and optimize AI-native software architectures with high-performance checklists and telemetry.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
